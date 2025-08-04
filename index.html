@@ -138,11 +138,14 @@
       margin:0 0 .5rem;
       line-height:1.1;
     }
-    .hero h1 span{
-      background: linear-gradient(90deg, #6366f1, #a5b4fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.hero h1 span {
+  background: linear-gradient(90deg, #6366f1, #a5b4fc);
+  background-clip: text;
+  -webkit-background-clip: text; /* for Safari/WebKit */
+  color: transparent; /* for non-WebKit */
+  -webkit-text-fill-color: transparent; /* for better WebKit consistency */
+}
+
     .hero p{
       margin:0 0 1rem;
       color: var(--muted);
