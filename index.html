@@ -451,6 +451,164 @@
         width: auto;
       }
     }
+    /* glowing profile photo */
+.hero-img {
+  position: relative; /* for layering if needed */
+  transition: transform .25s ease;
+  /* base glow */
+  box-shadow: 0 0 25px 8px rgba(99,102,241,0.6), 0 0 60px 20px rgba(99,102,241,0.3);
+}
+
+/* optional gentle pulse */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 20px 6px rgba(99,102,241,0.5), 0 0 50px 15px rgba(99,102,241,0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(99,102,241,0.8), 0 0 70px 25px rgba(99,102,241,0.35);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 20px 6px rgba(99,102,241,0.5), 0 0 50px 15px rgba(99,102,241,0.2);
+    transform: scale(1);
+  }
+}
+
+/* enable pulsing glow */
+.hero-img.pulse {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* stronger glow on hover */
+.hero-img:hover {
+  box-shadow: 0 0 35px 12px rgba(99,102,241,1), 0 0 90px 30px rgba(99,102,241,0.5);
+  transform: translateY(-2px);
+}
+/* ==== GLOBAL GLOW STYLES ==== */
+:root {
+  --glow-color: rgba(99,102,241,0.7);
+  --glow-spread: 0 0 20px var(--glow-color), 0 0 40px rgba(99,102,241,0.4);
+}
+
+/* Glow animation */
+@keyframes global-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(99,102,241,0.5), 0 0 30px rgba(99,102,241,0.25);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(99,102,241,1), 0 0 60px rgba(99,102,241,0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(99,102,241,0.5), 0 0 30px rgba(99,102,241,0.25);
+  }
+}
+
+/* Apply glow to cards */
+.card {
+  box-shadow: var(--glow-spread);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  animation: global-pulse 3s infinite ease-in-out;
+}
+
+/* Buttons glow */
+.btn, .submit-btn {
+  box-shadow: var(--glow-spread);
+}
+.btn:hover, .submit-btn:hover {
+  animation: global-pulse 2s infinite ease-in-out;
+}
+
+/* Navigation links glow */
+nav a {
+  text-shadow: 0 0 5px var(--glow-color);
+}
+nav a:hover {
+  box-shadow: var(--glow-spread);
+  border-radius: 8px;
+}
+
+/* Section titles glow */
+.section-title {
+  text-shadow: 0 0 5px var(--glow-color), 0 0 15px rgba(99,102,241,0.4);
+}
+
+/* Project images glow */
+.project-thumb {
+  box-shadow: var(--glow-spread);
+  transition: 0.3s ease;
+}
+.project-thumb:hover {
+  animation: global-pulse 3s infinite ease-in-out;
+}
+
+/* Footer glow */
+footer {
+  box-shadow: 0 -2px 15px rgba(99,102,241,0.3);
+}
+
+/* Optional: all clickable items glow */
+a, button {
+  transition: 0.3s ease;
+}
+a:hover, button:hover {
+  animation: global-pulse 2.5s infinite ease-in-out;
+}
+/* ==== VIVID PERMANENT GLOW THEME ==== */
+:root {
+  --glow-color-strong: rgba(99,102,241,1);
+}
+
+/* Global animated glow */
+@keyframes vivid-pulse {
+  0% {
+    box-shadow: 0 0 25px var(--glow-color-strong), 0 0 60px rgba(99,102,241,0.7);
+  }
+  50% {
+    box-shadow: 0 0 45px var(--glow-color-strong), 0 0 100px rgba(99,102,241,1);
+  }
+  100% {
+    box-shadow: 0 0 25px var(--glow-color-strong), 0 0 60px rgba(99,102,241,0.7);
+  }
+}
+
+/* Cards */
+.card {
+  animation: vivid-pulse 3s infinite ease-in-out;
+}
+
+/* Buttons */
+.btn, .submit-btn {
+  animation: vivid-pulse 2.5s infinite ease-in-out;
+}
+
+/* Images */
+.hero-img, .project-thumb, .quote-img {
+  animation: vivid-pulse 3.5s infinite ease-in-out;
+}
+
+/* Section titles */
+.section-title {
+  text-shadow: 0 0 10px var(--glow-color-strong), 0 0 25px rgba(99,102,241,0.9);
+}
+
+/* Navigation links */
+nav a {
+  text-shadow: 0 0 8px var(--glow-color-strong), 0 0 18px rgba(99,102,241,0.8);
+}
+
+/* Footer */
+footer {
+  animation: vivid-pulse 4s infinite ease-in-out;
+}
+
+/* Optional: Make body background breathe too */
+body {
+  animation: vivid-pulse 6s infinite ease-in-out;
+}
+
   </style>
 </head>
 <body>
@@ -476,12 +634,13 @@
     <!-- Hero -->
     <section class="hero" aria-label="Hero section">
       <div class="hero-content">
-        <h1 class="hero-heading"><span class="typing">Welcome to My Web Dev Portfolio</span></h1>
+        <h1 class="hero-heading"><span class="typing">Welcome to My Portfolio</span></h1>
         <p class="subtitle">Fast, responsive, modern websites built with care.</p>
         <a class="btn" href="#projects">See All My Projects →</a>
       </div>
       <div aria-hidden="true">
-        <img src="images/gero.jpg" alt="My Photo" class="hero-img" />
+        <img src="images/gero.jpg" alt="My Photo" class="hero-img pulse" />
+
       </div>
     </section>
 
