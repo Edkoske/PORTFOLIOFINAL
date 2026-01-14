@@ -160,7 +160,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.5rem;
   border-bottom: 1px solid var(--border);
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
@@ -168,6 +168,11 @@ header {
   top: 0;
   z-index: 100;
   margin-bottom: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -179,10 +184,16 @@ header {
   background-clip: text;
   letter-spacing: -0.5px;
   transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .logo:hover {
   filter: brightness(1.2);
+  transform: scale(1.02);
 }
 
 .menu-wrapper {
@@ -336,20 +347,63 @@ nav a:active {
   margin-top: 0.5rem;
 }
 
-.hero-img {
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.hero-image-container {
+  position: relative;
   width: 100%;
   max-width: 400px;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
   box-shadow: var(--shadow);
-  border: 2px solid var(--border);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  padding: 8px;
   transition: var(--transition);
 }
 
-.hero-img:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 2;
+}
+
+.hero-image-container:hover::before {
+  opacity: 1;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-container:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover), 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.hero-image-container:hover .hero-img {
+  transform: scale(1.05);
 }
 
 /* Buttons */
@@ -1047,7 +1101,20 @@ section:last-child {
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+  }
+  
+  .hero p {
+    margin: 0 auto;
+  }
+  
+  .hero-image-wrapper {
+    max-width: 400px;
   }
   
   .two-col {
@@ -1113,9 +1180,19 @@ section:last-child {
     gap: 2rem;
   }
   
+  section {
+    padding: 0 1rem;
+  }
+  
   .hero {
-    padding: 1rem 0;
+    padding: 2rem 1rem;
     min-height: auto;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    align-items: center;
+    text-align: center;
   }
   
   .hero h1 {
@@ -1128,6 +1205,26 @@ section:last-child {
   
   .hero p {
     font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-image-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .hero-image-container {
+    max-width: 100%;
+    padding: 6px;
+  }
+  
+  .hero-image-container:hover {
+    transform: translateY(-4px) scale(1.01);
   }
   
   .btn {
@@ -1137,10 +1234,12 @@ section:last-child {
   
   .section-title {
     font-size: 1.75rem;
+    text-align: center;
   }
   
   .subtitle {
     font-size: 1rem;
+    text-align: center;
   }
   
   .projects-grid {
@@ -1158,6 +1257,8 @@ section:last-child {
   
   .quote {
     padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
   }
   
   .quote p:first-child {
@@ -1165,11 +1266,43 @@ section:last-child {
   }
   
   header {
-    padding: 1rem 0;
+    padding: 1rem;
   }
   
   .logo {
     font-size: 1.25rem;
+  }
+  
+  .contact {
+    gap: 1.5rem;
+  }
+  
+  .contact-info {
+    gap: 1.25rem;
+  }
+  
+  .form-submit-btn {
+    width: 100%;
+    align-self: stretch;
+  }
+  
+  .socials {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .socials a {
+    flex: 1 1 auto;
+    min-width: 120px;
+    justify-content: center;
+  }
+  
+  header {
+    padding: 1rem;
+  }
+  
+  .menu-wrapper {
+    gap: 0.25rem;
   }
 }
 
