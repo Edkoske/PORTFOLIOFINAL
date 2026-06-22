@@ -29,6 +29,8 @@
         if (loader) loader.style.display = 'none';
         document.body.classList.remove('loading');
         document.body.style.overflow = 'auto';
+        const pageContainer = document.querySelector('.container');
+        if (pageContainer) pageContainer.classList.add('loaded');
       }, 400);
     }, remaining);
   }
@@ -86,6 +88,29 @@
           // Use custom fast smooth scroll (600ms for speed)
           smoothScrollTo(offsetPosition, 600);
         }
+      }
+    });
+  });
+})();
+
+// Mobile menu accessibility
+(function() {
+  'use strict';
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('site-navigation');
+
+  if (!menuToggle || !nav) return;
+
+  menuToggle.addEventListener('change', () => {
+    menuToggle.setAttribute('aria-expanded', menuToggle.checked ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900 && menuToggle.checked) {
+        menuToggle.checked = false;
+        menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
   });
@@ -243,7 +268,7 @@
     formMessage.className = 'form-message ' + type;
     formMessage.style.display = 'block';
     formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    setTimeout(() => {
+      setTimeout(() => {
       formMessage.style.display = 'none';
     }, 5000);
   }
