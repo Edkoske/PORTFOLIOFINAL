@@ -1,333 +1,381 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Edison Koske">
-  <meta name="description" content="Edison Koske - Full Stack Web Developer specializing in modern web applications, responsive design, and scalable solutions. Based in Nairobi, Kenya.">
-  <meta name="keywords" content="web developer, full stack developer, frontend developer, backend developer, Nairobi, Kenya, HTML, CSS, JavaScript, PHP, Python, Django">
-  <meta property="og:title" content="Edison Koske - Full Stack Web Developer">
-  <meta property="og:description" content="Professional web developer creating modern, responsive, and scalable web solutions.">
+  <meta name="description" content="Edison Koske — Full Stack Web Developer building web applications, campaign websites, and digital solutions. Based in Nairobi, Kenya.">
+  <meta property="og:title" content="Edison Koske — Full Stack Web Developer">
+  <meta property="og:description" content="Professional web developer creating web applications, campaign websites, and scalable digital solutions.">
   <meta property="og:type" content="website">
   <title>Edison Koske | Full Stack Web Developer</title>
-  <link rel="dns-prefetch" href="https://github.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top" class="loading">
+  <div class="ambient" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="container">
-    <!-- Header -->
-    <header aria-label="Site header">
-      <a href="#top" class="logo" aria-label="Logo - Go to top">Edison Koske</a>
-      <div class="menu-wrapper">
-        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" aria-controls="site-navigation" aria-expanded="false">
-        <label for="menu-toggle" class="hamburger" aria-hidden="true">
-          <span></span>
-        </label>
-        <nav id="site-navigation" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#background">Background</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-        </nav>
+
+  <div class="page-wrap">
+    <header class="site-header" aria-label="Site header">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="Edison Koske — home">
+          <span class="logo-mark">EK</span>
+          Edison Koske
+        </a>
+        <div class="menu-wrapper">
+          <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" aria-controls="site-navigation" aria-expanded="false">
+          <label for="menu-toggle" class="hamburger" aria-hidden="true">
+            <span></span>
+          </label>
+          <nav id="site-navigation" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#background">Background</a>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/Edkoske" class="nav-cta" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </nav>
+        </div>
       </div>
     </header>
+
     <main id="main">
+      <div class="container">
 
-    <!-- Hero -->
-    <section class="hero" aria-label="Hero section">
-      <div class="hero-content">
-        <h1>
-          <span class="greeting">Hello, I'm</span>
-          <span>Edison Koske</span>
-        </h1>
-        <p class="role">Full Stack Web Developer</p>
-        <p>I craft exceptional digital experiences by combining clean code, intuitive design, and scalable architecture. Specializing in modern web technologies, I transform complex requirements into elegant, user-friendly solutions.</p>
-        <div class="hero-buttons">
-          <a class="btn" href="#projects"><span>View My Work</span></a>
-          <a class="btn btn-secondary" href="#contact"><span>Get In Touch</span></a>
-        </div>
-      </div>
-      <div class="hero-image-wrapper">
-        <div class="hero-image-container">
-          <img src="images/1.jpeg" alt="Edison Koske - Professional Web Developer" class="hero-img" width="400" height="400" loading="eager" fetchpriority="high" />
-        </div>
-      </div>
-    </section>
+        <section class="hero" aria-label="Introduction">
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              Available for opportunities
+            </div>
+            <h1>
+              <span class="greeting">Hello, I'm</span>
+              <span class="accent-line">Edison Koske</span>
+            </h1>
+            <p class="role">Full Stack Web Developer</p>
+            <p>I build performant, accessible web applications and campaign websites for businesses and institutions — from government portals and e-commerce platforms to high-converting landing pages.</p>
+            <div class="hero-buttons">
+              <a class="btn" href="#projects">View Selected Work</a>
+              <a class="btn btn-secondary" href="#contact">Start a Conversation</a>
+            </div>
+            <div class="hero-metrics" aria-label="Highlights">
+              <div class="metric">
+                <strong>7+</strong>
+                <span>Projects</span>
+              </div>
+              <div class="metric">
+                <strong>Full Stack</strong>
+                <span>Specialization</span>
+              </div>
+              <div class="metric">
+                <strong>Nairobi</strong>
+                <span>Based in Kenya</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <div class="hero-image-container">
+              <img src="images/1.jpeg" alt="Edison Koske" class="hero-img" width="300" height="400" loading="eager" fetchpriority="high" />
+            </div>
+          </div>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="card reveal" id="skills" aria-labelledby="skills-title">
-      <h2 class="section-title" id="skills-title">Technical Skills</h2>
-      <p class="subtitle">Technologies and tools I work with</p>
-      <div class="skills-grid">
-        <div class="skill-item stagger-item">
-          <h4>Frontend Development</h4>
-          <p>HTML5, CSS3, JavaScript, Responsive Design, Accessibility</p>
-        </div>
-        <div class="skill-item stagger-item">
-          <h4>Backend Development</h4>
-          <p>PHP, Python, Django, RESTful APIs, Database Design</p>
-        </div>
-        <div class="skill-item stagger-item">
-          <h4>UI/UX Design</h4>
-          <p>User-Centered Design, Prototyping, Modern Aesthetics</p>
-        </div>
-        <div class="skill-item stagger-item">
-          <h4>Tools & Practices</h4>
-          <p>Version Control (Git), CMS Development, Agile Methodology</p>
-        </div>
-      </div>
-    </section>
+        <section class="section-block reveal" id="skills" aria-labelledby="skills-title">
+          <div class="section-header">
+            <div class="section-header-text">
+              <p class="section-num">01 — Expertise</p>
+              <h2 class="section-title" id="skills-title">Technical Skills</h2>
+              <p class="subtitle">Core technologies and practices across the stack</p>
+            </div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item stagger-item">
+              <h4>Frontend</h4>
+              <p>HTML5, CSS3, JavaScript, responsive design, WCAG accessibility</p>
+            </div>
+            <div class="skill-item stagger-item">
+              <h4>Backend</h4>
+              <p>PHP, Python, Django, REST APIs, relational database design</p>
+            </div>
+            <div class="skill-item stagger-item">
+              <h4>UI / UX</h4>
+              <p>User-centered design, campaign landing pages, prototyping, interface systems</p>
+            </div>
+            <div class="skill-item stagger-item">
+              <h4>Workflow</h4>
+              <p>Git, CMS development, agile delivery, code review</p>
+            </div>
+          </div>
+        </section>
 
-    <!-- Intro & Background -->
-    <div class="two-col">
-      <section class="card reveal-left" id="about" aria-labelledby="about-title">
-        <h2 class="section-title" id="about-title">About Me</h2>
-        <p class="subtitle">Passionate developer dedicated to creating impactful digital solutions</p>
-        <p>With a strong foundation in both frontend and backend development, I specialize in building comprehensive web applications that are not only visually appealing but also performant, accessible, and maintainable. My approach combines technical expertise with a keen eye for user experience, ensuring every project delivers real value.</p>
-        <p>I'm constantly learning and staying updated with the latest industry trends and best practices, which allows me to deliver cutting-edge solutions that meet modern standards.</p>
-        <div class="about-image">
-          <img src="images/about.jpg" alt="Edison Koske working on web development projects" width="800" height="600" loading="lazy" />
-        </div>
-      </section>
-      <section class="card reveal-right" id="background" aria-labelledby="background-title">
-        <h2 class="section-title" id="background-title">Background</h2>
-        <p class="subtitle">Education &amp; Professional Experience</p>
-        <div class="background-section">
-          <h3>Education</h3>
-            <ul>
-            <li>
-              <strong>Diploma in Information Technology</strong>
-              <p>Comprehensive training in software development, database management, and system architecture</p>
-            </li>
-            <li>
-              <strong>Certificate in Web Development</strong>
-              <p>Specialized certification focusing on modern web technologies and best practices</p>
-            </li>
-            </ul>
-        </div>
-        <div class="background-section">
-          <h3>Professional Experience</h3>
-          <ul>
-            <li>
-              <strong>Freelance Full Stack Web Developer</strong>
-              <p>Delivering end-to-end web solutions for diverse clients including startups and educational institutions</p>
-          </li>
-            <li>
-              <strong>Government Portal Development</strong>
-              <p>Experience building secure, scalable portals similar to eCitizen with focus on user accessibility</p>
-          </li>
-        </ul>
-        </div>
-      </section>
-    </div>
+        <div class="two-col">
+          <section class="card reveal-left" id="about" aria-labelledby="about-title">
+            <div class="section-header">
+              <div class="section-header-text">
+                <p class="section-num">02 — Profile</p>
+                <h2 class="section-title" id="about-title">About</h2>
+              </div>
+            </div>
+            <p>I develop web applications and campaign websites that are fast, maintainable, and accessible. My work spans frontend interfaces and backend systems, with a consistent focus on quality and user experience.</p>
+            <p>I stay current with industry standards to deliver solutions built for long-term reliability.</p>
+            <div class="about-image">
+              <img src="images/about.jpg" alt="Edison Koske at work" width="800" height="450" loading="lazy" />
+            </div>
+          </section>
 
-    <!-- Projects -->
-    <section class="card reveal" id="projects" aria-labelledby="projects-title">
-      <h2 class="section-title" id="projects-title">Featured Projects</h2>
-      <p class="subtitle">A curated selection of my recent work showcasing diverse technical capabilities</p>
-      <div class="projects-grid" aria-label="Project list">
-        <!-- eCitizen Clone -->
-        <div class="card project-card" aria-label="Project: eCitizen Portal Clone">
-          <img class="project-thumb" src="images/project1.jpg" alt="eCitizen Clone screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>eCitizen Portal Clone</h3>
-            <p>A comprehensive government portal recreation featuring modular architecture, fully responsive design, and secure authentication workflows. Built with accessibility and user experience as core priorities.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Accessibility</span>
+          <section class="card reveal-right" id="background" aria-labelledby="background-title">
+            <div class="section-header">
+              <div class="section-header-text">
+                <p class="section-num">03 — Background</p>
+                <h2 class="section-title" id="background-title">Experience</h2>
+              </div>
             </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-        <!-- Animated Portfolio -->
-        <div class="card project-card" aria-label="Project: Animated Portfolio Website">
-          <img class="project-thumb" src="images/project2.jpg" alt="Animated Portfolio screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>Animated Portfolio Website</h3>
-            <p>A visually striking portfolio showcasing pure CSS animations and modern design principles. Features smooth transitions, dark theme aesthetics, and interactive elements without JavaScript dependencies.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">UX</span>
+            <div class="background-section">
+              <h3>Education</h3>
+              <ul>
+                <li>
+                  <strong>Diploma in Information Technology</strong>
+                  <p>Software development, databases, system architecture</p>
+                </li>
+                <li>
+                  <strong>Certificate in Web Development</strong>
+                  <p>Modern web technologies and industry practices</p>
+                </li>
+              </ul>
             </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-        <!-- Campus Website -->
-        <div class="card project-card" aria-label="Project: Campus Website with CMS">
-          <img class="project-thumb" src="images/project3.jpg" alt="Campus Website with CMS screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>Campus Website with CMS</h3>
-            <p>A comprehensive educational platform with integrated content management system, resource library, and dynamic events calendar. Designed to streamline information delivery for students and faculty.</p>
-            <div class="tags">
-              <span class="tag">Responsive</span>
-              <span class="tag">CMS</span>
-              <span class="tag">HTML/CSS</span>
+            <div class="background-section">
+              <h3>Experience</h3>
+              <ul>
+                <li>
+                  <strong>Freelance Full Stack Developer</strong>
+                  <p>End-to-end web solutions, campaign websites, and digital platforms for startups and institutions</p>
+                </li>
+                <li>
+                  <strong>Government Portal Development</strong>
+                  <p>Secure, scalable portals with accessibility at the core</p>
+                </li>
+              </ul>
             </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
+          </section>
         </div>
-        <!-- Computer Packages Store -->
-        <div class="card project-card" aria-label="Project: Computer Packages Store">
-          <img class="project-thumb" src="images/project1.png" alt="Computer Packages Store screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>Computer Packages Store</h3>
-            <p>A fully functional e-commerce platform with intuitive product catalog, streamlined checkout process, and conversion-optimized design. Focuses on user experience and sales performance.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">UX</span>
-            </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-        <!-- PHP Login + Admin Panel -->
-        <div class="card project-card" aria-label="Project: PHP Login Admin Panel">
-          <img class="project-thumb" src="images/profile.jpg" alt="PHP Login + Admin Panel screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>PHP Login + Admin Panel</h3>
-            <p>A robust authentication system with comprehensive admin dashboard, implementing role-based access control, secure session management, and intuitive user interface for administrative tasks.</p>
-            <div class="tags">
-              <span class="tag">PHP</span>
-              <span class="tag">Authentication</span>
-              <span class="tag">Backend</span>
-            </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-        <!-- Blog with Django -->
-        <div class="card project-card" aria-label="Project: Blog with Django">
-          <img class="project-thumb" src="images/project1.png" alt="Blog with Django screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>Blog with Django</h3>
-            <p>A powerful content management platform built with Django framework, featuring dynamic post management, advanced tagging system, and comprehensive admin interface for content creators.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Django</span>
-              <span class="tag">CMS</span>
-            </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-        <!-- AI Feature Landing Page -->
-        <div class="card project-card" aria-label="Project: AI Feature Landing Page">
-          <img class="project-thumb" src="images/project2.jpg" alt="AI Feature Landing Page screenshot" loading="lazy" />
-          <div class="project-info">
-            <h3>AI Feature Landing Page</h3>
-            <p>A conversion-focused landing page for an AI-powered solution, featuring strategic call-to-action placement, compelling feature presentations, and optimized user journey for maximum engagement.</p>
-            <div class="tags">
-              <span class="tag">Marketing</span>
-              <span class="tag">Design</span>
-              <span class="tag">Conversion</span>
-            </div>
-            <a href="https://github.com/Edkoske" class="project-link" aria-label="View project details">View on GitHub <span>→</span></a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Quote -->
-      <div class="quote reveal" aria-label="Quote section">
-        <div>
-          <p>"Transforming ideas into digital reality through clean code, thoughtful design, and innovative solutions."</p>
-          <p>— Edison Koske</p>
-        </div>
-        <div>
-          <img src="images/html5.png" alt="Web Development Technologies" class="quote-img" />
-        </div>
-      </div>
-    </section>
+        <section class="section-block reveal" id="projects" aria-labelledby="projects-title">
+          <div class="section-header">
+            <div class="section-header-text">
+              <p class="section-num">04 — Portfolio</p>
+              <h2 class="section-title" id="projects-title">Selected Work</h2>
+              <p class="subtitle">Projects across frontend, backend, full-stack development, and campaign websites</p>
+            </div>
+          </div>
 
-    <!-- Contact / Footer Info -->
-      <section class="card reveal" id="contact" aria-labelledby="contact-title">
-        <h2 class="section-title" id="contact-title">Get In Touch</h2>
-      <p class="subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to collaborate. Let's build something amazing together.</p>
-      <div class="contact">
-        <div class="card">
-          <h3>Send a Message</h3>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
-</div>
-            <button type="submit" class="form-submit-btn" id="submitBtn">
-              <span>Send Message</span>
-            </button>
-            <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-        <div class="card">
-          <h3>Contact Information</h3>
-          <div class="contact-info">
-            <p><strong>📍 Location:</strong><br>Nairobi, Kenya</p>
-            <p><strong>✉️ Email:</strong><br><a href="mailto:edisonkipkemoi319@gmail.com">edisonkipkemoi319@gmail.com</a></p>
-            <p><strong>📱 Phone:</strong><br><a href="tel:+254727732157">+254 727 732157</a></p>
-            <p><strong>💻 GitHub:</strong><br><a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer">github.com/Edkoske</a></p>
+          <div class="projects-grid">
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">01</span>
+                <img class="project-thumb" src="images/project1.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>eCitizen Portal Clone</h3>
+                <p>Government portal with modular architecture, responsive design, and secure auth workflows.</p>
+                <div class="tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">02</span>
+                <img class="project-thumb" src="images/project2.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>Animated Portfolio</h3>
+                <p>Pure CSS animations, smooth transitions, and interactive elements without JavaScript.</p>
+                <div class="tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">03</span>
+                <img class="project-thumb" src="images/project3.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>Campus Website + CMS</h3>
+                <p>Educational platform with content management, resource library, and events calendar.</p>
+                <div class="tags">
+                  <span class="tag">CMS</span><span class="tag">Responsive</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">04</span>
+                <img class="project-thumb" src="images/project1.png" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>Computer Packages Store</h3>
+                <p>E-commerce platform with product catalog, checkout flow, and conversion-focused UX.</p>
+                <div class="tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">05</span>
+                <img class="project-thumb" src="images/profile.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>PHP Login + Admin Panel</h3>
+                <p>Authentication system with role-based access control and session management.</p>
+                <div class="tags">
+                  <span class="tag">PHP</span><span class="tag">Backend</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">06</span>
+                <img class="project-thumb" src="images/project1.png" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>Blog with Django</h3>
+                <p>Content platform with dynamic posts, tagging, and admin interface.</p>
+                <div class="tags">
+                  <span class="tag">Python</span><span class="tag">Django</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-thumb-wrap">
+                <span class="project-index">07</span>
+                <img class="project-thumb" src="images/project2.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3>AI Feature Landing Page</h3>
+                <p>Conversion-focused landing page with strategic CTAs and optimized user flow.</p>
+                <div class="tags">
+                  <span class="tag">Design</span><span class="tag">Marketing</span>
+                </div>
+                <a href="https://github.com/Edkoske" class="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
           </div>
-          <div class="quick-nav">
-            <h3>Quick Navigation</h3>
-            <ul>
-              <li><a href="#about">About Me <span>→</span></a></li>
-              <li><a href="#skills">Skills <span>→</span></a></li>
-              <li><a href="#projects">Projects <span>→</span></a></li>
-              <li><a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer">GitHub Profile <span>→</span></a></li>
-          </ul>
+
+          <blockquote class="quote reveal">
+            <p>Transforming ideas into digital reality through clean code, thoughtful design, and reliable engineering.</p>
+            <cite>Edison Koske</cite>
+          </blockquote>
+        </section>
+
+        <section class="section-block reveal" id="contact" aria-labelledby="contact-title">
+          <div class="section-header">
+            <div class="section-header-text">
+              <p class="section-num">05 — Contact</p>
+              <h2 class="section-title" id="contact-title">Let's Work Together</h2>
+              <p class="subtitle">Open to freelance projects, collaborations, and full-time roles</p>
+            </div>
           </div>
-        </div>
+
+          <div class="contact">
+            <div class="card">
+              <h3>Send a message</h3>
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit-btn" id="submitBtn">Send Message</button>
+                <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <div class="card">
+              <h3>Direct contact</h3>
+              <dl class="contact-info">
+                <div class="contact-item">
+                  <dt>Location</dt>
+                  <dd>Nairobi, Kenya</dd>
+                </div>
+                <div class="contact-item">
+                  <dt>Email</dt>
+                  <dd><a href="mailto:edisonkipkemoi319@gmail.com">edisonkipkemoi319@gmail.com</a></dd>
+                </div>
+                <div class="contact-item">
+                  <dt>Phone</dt>
+                  <dd><a href="tel:+254727732157">+254 727 732 157</a></dd>
+                </div>
+                <div class="contact-item">
+                  <dt>GitHub</dt>
+                  <dd><a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer">github.com/Edkoske</a></dd>
+                </div>
+              </dl>
+              <nav class="quick-nav" aria-label="Quick links">
+                <h3>Navigate</h3>
+                <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#projects">Work</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <p class="small">&copy; 2026 Edison Koske. All rights reserved.</p>
+          </div>
+        </section>
+
       </div>
-      <div class="copyright">
-        <p class="small">© 2025 Edison Koske. All Rights Reserved.</p>
-      </div>
-    </section>
     </main>
 
     <footer aria-label="Site footer">
-      <div class="socials" aria-label="Social links">
-        <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38
-              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-              -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
-              -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5
-              7.5 0 0 1 2-.27c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
-              2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
-              1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          GitHub
-        </a>
+      <div class="container footer-inner">
+        <div class="socials">
+          <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer">
+            <svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+                -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5
+                7.5 0 0 1 2-.27c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+                2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+                1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <p class="small">Full Stack Web Developer — Nairobi, Kenya</p>
       </div>
-      <p class="small">Crafted with precision. Built for excellence.</p>
     </footer>
-  </div>
-
-  <!-- Loading Screen - Professional Style -->
-  <div class="loader-wrapper" id="loader">
-    <div class="loader-container">
-      <div class="loader-name">Edison Koske</div>
-      <div class="loader">
-        <div class="loader-ring"></div>
-        <div class="loader-ring"></div>
-        <div class="loader-ring"></div>
-      </div>
-      <div class="loader-text">Loading</div>
-      <div class="loader-progress" id="progress">0%</div>
-    </div>
   </div>
 
   <script src="script.js" defer></script>
